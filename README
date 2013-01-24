@@ -1,0 +1,30 @@
+pix_depth_subtract
+======================================
+
+pure data / Gem external to filter out certain parts in a defined x,y,z region of the depthmap provided by Kinect camera via pix_freenect or pix_openni.
+
+
+(C) 2013 by Antoine Villeret
+__________________________________________________________
+
+pix_openni and pix_freenect can (if set to raw mm mode) output the depth information in millimeter in the red and green color channel.
+
+this external allows you to filter out parts of the depthmap by subtracting a reference image
+
+all computation is done on cpu!
+consider using gpu shaders if you don't need the data on cpu side!
+
+_______________
+:::CHANGELOG:::
+
+
+ ________________
+:::KNOWN BUGS:::
+
+
+ ________________
+:::THINGS TO DO:::
+
+
+
+questions: m.kronlachner@gmail.com
