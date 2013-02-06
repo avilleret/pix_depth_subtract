@@ -20,9 +20,6 @@
 
 CPPEXTERN_NEW(pix_depth_subtract);
 
-//~ #define XtoZ 1.111466646194458
-//~ #define YtoZ 0.833599984645844
-
 /////////////////////////////////////////////////////////
 //
 // pix_depth_subtract
