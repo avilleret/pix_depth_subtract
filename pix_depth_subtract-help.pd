@@ -1,5 +1,4 @@
-#N canvas 552 110 610 482 10;
-#X text 10 38 for use with pix_freenect or pix_openni;
+#N canvas 548 122 610 482 10;
 #X obj 319 293 gemwin;
 #X msg 274 247 destroy;
 #X msg 319 223 dimen 640 240 \, create \, 1;
@@ -7,22 +6,26 @@
 #X msg 381 289 dimen 1280 480 \, create \, 1;
 #X text 10 7 extract part of image in certain distance (distance coded
 into r and g color channel);
-#N canvas 117 651 680 300 test 1;
-#X restore 445 416 pd test;
 #X obj 64 77 gemhead;
 #X obj 64 324 pix_texture;
 #X obj 64 346 rectangle 4 3;
 #X obj 64 284 pix_depth_subtract;
-#X msg 87 260 setref;
-#X msg 145 252 offset 100 100;
+#X msg 88 250 setref;
 #X obj 64 139 pix_freenect 0 1 0;
-#X connect 2 0 1 0;
-#X connect 3 0 1 0;
-#X connect 4 0 1 0;
-#X connect 5 0 1 0;
-#X connect 8 0 14 0;
-#X connect 9 0 10 0;
-#X connect 11 0 9 0;
-#X connect 12 0 11 0;
-#X connect 13 0 11 0;
-#X connect 14 0 11 0;
+#X msg 145 252 offset 100;
+#X text 63 374 message :;
+#X text 73 392 setref : take the current image as a reference (for
+subtracting);
+#X text 73 432 offset <float> : offset (in mm) for the reference image
+(that helps to filter noise);
+#X text 10 38 for use with pix_freenect or pix_openni depth output
+(mm output only);
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 6 0 11 0;
+#X connect 7 0 8 0;
+#X connect 9 0 7 0;
+#X connect 10 0 9 0;
+#X connect 12 0 9 0;
